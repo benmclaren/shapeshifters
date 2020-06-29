@@ -23,3 +23,15 @@
   background-color: #F9343D;
 }
 
+.box {
+  box-shadow: inset 0 0 0 4px #000;
+}
+
+.conveyer-belt {
+  border-left: solid 4px #000;
+  border-right: solid 4px #000;
+}
+
+.page {
+    border: solid 4px #000;
+}
