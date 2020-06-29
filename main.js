@@ -28,3 +28,18 @@ anime({
 });
 
 
+
+ const zigZagPath = document.querySelector('#zigzag path');
+ // setDashOffset figures out how lomg the path is
+ const zigZagOffset = anime.setDashoffset(zigZagPath);
+ // we then set that back onto the path element
+  zigZagPath.setAttribute('stroke-dashoffset', zigZagOffset);
+  anime({
+    targets: zigZagPath,
+    strokeDashoffset: [zigZagOffset, 0],
+    duration: anime.random(1000, 9000),
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine',
+    autoplay: true
+  });
