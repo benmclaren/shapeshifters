@@ -1,4 +1,5 @@
-.tunnel circle {
+.tunnel circle,
+#crosses path {
   /* by default elements transform from the top left so we need to say transform from the center*/
   transform-origin: center;
 }

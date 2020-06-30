@@ -1,3 +1,26 @@
+// we want to duplicate our crosses content ten times
+const duplicateHtml = (element, quantity) => {
+  const content = element.innerHTML;
+  const newContent = new Array(quantity).fill(content).join('');
+  element.innerHTML = newContent
+}
+
+const crosses = document.querySelector('#crosses');
+duplicateHtml(crosses, 10);
+
+anime({
+  // normal css selector
+  targets: '#crosses path',
+  rotate: '1turn',
+  delay: (el, i, l) => i * 100,
+  duration: 1200,
+  loop: true,
+  direction: 'alternate',
+  easing: 'easeInOutSine'
+});
+
+
+
 anime({
   // normal css selector
   targets: '#tunnel circle',
@@ -44,7 +67,7 @@ anime({
     autoplay: true
   });
 
-// we duplicate the saem code pretty much for the wave
+// we duplicate the same code pretty much for the wave
 const wavePath = document.querySelector('#wave path');
 const waveOffset = anime.setDashoffset(wavePath);
 
