@@ -112,3 +112,12 @@ anime({
     easing: 'easeInOutSine',
   });
 
+anime({
+    targets: '#flashes .flash',
+    backgroundColor: (el, i) => ['#fff636', '#cb89fc', '#fc3035', '#77ebfd'][i],
+    delay: (el, i) => anime.random(50, 100),
+    duration: 500,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine',
+  });
