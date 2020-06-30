@@ -81,9 +81,34 @@ wavePath.setAttribute('stroke-dashoffset', waveOffset);
     easing: 'easeInOutSine',
   });
 
+const dot = document.querySelector('#dots');
+duplicateHtml(dot, 40);
+
+const dots =document.querySelectorAll('#dots .dot');
+
+dots.forEach(dot => {
+   anime({
+    targets: dot,
+    // random rotation
+    rotate: (el, i) => anime.random(90, 360),
+    // random duration
+    duration: (el, i) => anime.random(250, 750),
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine',
+  });
+});
 
 
+duplicateHtml(document.querySelector('#circles'), 20);
 
-
-
+anime({
+    targets: '#circles .dot',
+    scale:[0, 1.2],
+    delay: (el, i) => i * 100,
+    duration: 250,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine',
+  });
 
