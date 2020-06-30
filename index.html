@@ -4,11 +4,13 @@
   <title>ShapeShifters</title>
   <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"/>
   <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
   <!-- items-stretch tells child elements to stretch to full height -->
-  <div class="page min-vh-100 flex items-stretch">
-    <div class="w-third flex flex-wrap">
+  <!-- by default use flex-column in mboile and then flex-row on desktop -->
+  <div class="page min-vh-100 flex items-stretch flex-column flex-row-ns overflow-hidden-ns">
+    <div class="w-100 vh-100 flex flex-wrap">
 
       <div class="w-100 h-50 bg-yellow conveyer-belt overflow-hidden box">
         <!-- our inner element is twice the width and scrolls from right to left -->
@@ -45,7 +47,7 @@
 
 
     <!-- our second column -->
-    <div class="w-third flex flex-wrap">
+    <div class="w-100 vh-100 flex flex-wrap">
       <div class="w-100 h-25 bg-blue box flex justify-center items-center">
           <svg width="80%" height="100%" viewBox="0 0 640 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -75,7 +77,7 @@
       </div>
     </div>
     <!-- our third column -->
-    <div class="w-third flex flex-wrap">
+    <div class="w-100 vh-100 flex flex-wrap">
       <div class="w-100 h-50 bg-purple pa3 box" id="zigzag">
       <svg width="100%" height="100%" viewBox="0 0 498 495" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <desc>Created with Sketch.</desc>
