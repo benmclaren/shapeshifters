@@ -121,3 +121,16 @@ anime({
     direction: 'alternate',
     easing: 'easeInOutSine',
   });
+
+anime({
+    targets: '#squares rect',
+    translateX: ['-50%', '-50%'],
+    translateY: ['-50%', '-50%'],
+    rotate: [45, 0, -45],
+    delay: (el, i) => i * 100,
+    duration: (el, i) => 750,
+    loop: true,
+    direction: 'alternate',
+    easing: 'easeInOutSine',
+  });
+
